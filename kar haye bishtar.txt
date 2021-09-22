@@ -1,5 +1,0 @@
-1- ba font awesome icon bezaram baraye side bar btn
-2- ba ye json(object/array)/xml biam ba fetch ya xmlhttprequest data begiram too bakhsh
-	haye mokhtalef e home, users, message, ... namayesheshun bedam.
-3- topic e "add new item" ezafe konam be side bar 
-
