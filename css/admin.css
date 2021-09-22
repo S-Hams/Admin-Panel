@@ -1,0 +1,287 @@
+*{
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    
+}
+
+*{
+    margin: 0;
+padding: 0;
+font-family: monospace;
+box-sizing: border-box; 
+transition: 0.2s;
+}
+
+#container{
+    position : absolute; 
+    width: 100%;
+    height: 100%;
+    background-color: #f7f7f7;
+}
+
+nav{
+    display: block;
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 200px;
+    margin-left: 0px;
+    height: 100%;
+    background: linear-gradient(#222020, white);
+
+}
+
+#logo {
+    margin-top: 0rem;
+    height : 50px;
+    background-color: #333333;
+    color: #3437e7;
+    text-align: center;
+    line-height: 45px ;
+    font-size: 1.3rem;
+    font-family: arial;
+}
+
+#logo span{
+    font-size: .8 rem;
+    font-family: fantasy;
+    font-style: italic;
+    color : #f7f7f7;
+}
+
+#menu{
+    width: 100%;
+    background-color: #333333;
+}
+
+#menu li{
+    line-height: 50px; 
+    /* in line-heigh bara center kardan e vertical kheily khoobe, mige har line height esh chegahd bashe */
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(#333333,#636363) ;
+}
+
+#menu li:hover {
+    background-color: #111111 ;
+    border-left: .3rem solid #3437e7;
+
+}
+
+#menu li>a{
+    font-size: 1rem;
+    font-family: arial;
+    width: 100%;
+    height: 100%;
+    color:#f7f7f7;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+header{
+    width : calc(100% - 200px);
+    height: 50px;
+    position: absolute;
+    top : 0;
+    left : 200px;
+    background-color: #333333;
+    color : #f7f7f7;
+    line-height: 50px;
+}
+
+
+
+header #links{
+    float : right;
+    height : 50px;
+    display: block;
+    color: #f7f7f7;
+    font-size:  1 rem;
+}
+
+#links a{
+    color : #f7f7f7;
+    text-decoration: none;
+    padding: 0 .5rem;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+#links:hover {
+    background-color: #3437e7;
+}
+  
+main{
+    position : absolute;
+    top : 50px;
+    left: 200px;
+    height: calc(100% - 50px);
+    width: calc(100% - 200px);
+
+}
+
+#actions-container{
+    width:85%;
+    height: 85%;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%,-50%);
+    position : absolute;
+    background: linear-gradient(#222020, white);
+    background-color: #a5cece;
+    text-align: center;
+}
+
+
+
+.title{
+    padding: 0.5rem;
+    font-size: 20px;
+    height : auto;
+    width: 100%;
+    color : white;
+    background: linear-gradient(#333333, #222222);
+    z-index: 100;
+    margin-bottom: .5rem;
+}
+
+#minimize{
+    position : fixed;
+    top : calc(100% - 70px);
+    left: 75px;
+    height: 50px;
+    width:50px;
+    background-color: #3437e7;
+    border-radius: 50%;
+    line-height: 50px;
+    z-index : 100;
+    text-align : center;
+    font-size: 30px;
+    font-weight:bolder;
+}
+
+#minimize:hover {
+    background-color: #2325a0;
+    cursor:pointer ;
+}
+
+.topnav{
+    width : 100%;
+    left : 0px;
+}
+
+.leftnav{
+    left: -200px;
+}
+
+.main{
+    width : 100%;
+    left : 0px;
+}
+
+#items{
+   border-width: .3rem !important; background-color: rgb(53, 52, 52);
+   padding: 0;
+}
+
+.dropdown {
+    
+    display : none;
+    background-color: white;
+    color:black
+    }
+    
+.dropdownshow{
+        display: block ;
+    }
+        
+#dropdown li:hover{
+        cursor: pointer;
+        color :blue;
+}
+
+table{
+   
+    margin: 0 3% 1rem 3% !important;
+
+}
+
+th{
+    background-color: #1a1818 !important;
+}
+
+tr{
+    justify-content: center !important;
+    display: flex !important;
+    font-size: 1.3rem;
+}
+
+td{
+    background-color: #afadad !important;
+    color: black ;
+    font-size: 1rem;
+}
+
+
+.container {
+    width: 50%;
+
+}
+
+input, .input {
+    height: 2rem !important;
+
+    }
+
+
+    
+    
+@media only screen and (min-width: 800px) {
+    #trlarge{
+        display: flex !important;
+    }
+    #trsmall{
+        display: none !important;
+    }
+    }
+
+@media only screen and (max-width: 800px) {
+    .container{
+    
+     width: 100% !important;
+     padding: 0px !important;
+     margin: 0px !important;
+    }
+
+    input, .input{
+        font-size: .75rem !important;
+        font-weight :bold !important ;
+    }
+
+    #trlarge{
+        display: none !important;
+    }
+    #trsmall{
+        display: flex !important;
+    }
+
+
+  }
+
+  @media only screen and (max-width: 1200px) {
+    .container{
+     width: 75%;
+    }
+tr{
+    font-size: .8rem;
+}
+  }
+
+

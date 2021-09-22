@@ -1,0 +1,272 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/admin.css">
+
+</head>
+
+
+<style>
+
+
+
+</style>
+
+
+
+<body>
+    <div id="container">
+        <nav id='leftnav'>
+            <div id="logo">
+                Admin <span>Panel</span>
+            </div>
+            <ul id="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Users</a></li>
+                <li><a href="">Messages</a></li>
+                <li><a href="">Groups</a></li>
+                <li><a href="">Reports</a></li>
+                <li><a href="">Posts</a></li>
+                <li><a href="">Products</a></li>
+                <li><a href="">Products2</a></li>
+            </ul>
+        </nav>
+
+        <header id='topnav'>
+            <div id="links">
+                <a href="">Sign out</a>
+            </div>
+        </header>
+        <main id='main'>
+            <div id="actions-container">
+
+                <div id="Homecontainer">
+                    <div class="title">About Home</div>
+                </div>
+                <div id="Userscontainer">
+                    <div class="title">Users Information</div>
+                </div>
+                <div id="Messagescontainer">
+                    <div class="title">The Messages</div>
+                </div>
+                <div id="Groupscontainer">
+                    <div class="title">Existing Groups</div>
+                </div>
+                <div id="Reportscontainer">
+                    <div class="title">Reports and Analysis</div>
+                </div>
+                <div id="Postscontainer">
+                    <div class="title">Posts</div>
+                </div>
+
+                <!-- without form model add item menu -->
+                <div id="Productscontainer">
+
+                    <div class=" d-flex-column ">
+                        <div class="title">Products</div>
+                        <div class="  ">
+                            <!-- <div class=" row"> -->
+
+                            <div id='items'
+                                class=" container h5 text-light border  border-secondary d-flex-column "
+                                >
+                                <div class="h3 mt-0 bg-secondary d-no">Add New Item</div>
+                                <div>
+                                    <div>
+                                        <div class="d-flex justify-content-between">
+                                            <label for="itemname" class="m-2">Name </label>
+                                            <input id="itemname" name="itemname" class="m-2 float-end"
+                                                style="width: 70%;" type="text">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex justify-content-between">
+                                            <label for="itemprice" class="m-2">Price </label>
+                                            <input id="itemprice" name="itemprice" class="m-2 float-end"
+                                                style="width: 70%;" type="number">
+                                        </div>
+                                    </div>
+                                    <div class=" d-flex justify-content-between">
+
+                                        <label for="itemcat" class="m-2">Category </label>
+                                        <div class="input d-flex-colmun float-end m-2" style="width: 70%;">
+                                            <input id="itemcat" name="itemcat" class=" text-dark btn btn-light  w-100 "
+                                                value="click to select" type="button">
+
+
+                                            <ul id='dropdown' class='dropdown  ' style="position: absolute;width: 65%;">
+                                                <li class="mt-3"><a>Hat</a></li>
+                                                <li><a>sock</a></li>
+                                                <li><a>Tshirt</a></li>
+                                                <li><a>Pant</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex justify-content-between">
+                                            <label for="itemstock" class="m-2">Stock</label>
+                                            <input id="itemstock" name="itemstock" class="m-2 float-end"
+                                                style="width: 70%;" type="number">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <label class="m-2">Images</label>
+                                            <label for="itemfile"
+                                                class="input d-flex justify-content-center align-items-center btn m-2  bg-light text-dark"
+                                                style="width: 70%;"><span>Click to choose</span></label>
+                                            <input id="itemfile" name="itemfile" class="m-2 float-end d-none"
+                                                style="width: 70%;" type="file" multiple>
+                                        </div>
+                                    </div>
+
+                                    <input id='additembtn' type="button" value="Add New Item" class=" m-2 py-1"
+                                        style="width: 95%;">
+                                </div>
+                            </div>
+
+
+
+                            <div class="h5 mt-5 text-light border border-secondary d-flex-column  w-100 "
+                                style="border-width: .3rem !important; ">
+                                <div id='add' class="h3 mb-3 bg-secondary">Available Items</div>
+
+
+                                <table style="width: 95%;  " id='table' class=" table text-light  text-center">
+                                    <tr id="trlarge"   >
+                                            <th style="width: 10% !important; ">Id</th>
+                                            <th style="width: 20% !important;">Name</th>
+                                            <th style="width: 10% !important;">Price</th>
+                                            <th style="width: 20% !important;">Category</th>
+                                            <th style="width: 10% !important;">Stock</th>
+                                            <th style="width: 20% !important;">Image</th>
+                                        
+                                    </tr>
+
+
+                                    <tr id="trsmall" class="">
+                                        <th style="width: 10%;">Id</th>
+                                        <th style="width: 20%;">N.</th>
+                                        <th style="width: 10%;">P.</th>
+                                        <th style="width: 20%;">Cat.</th>
+                                        <th style="width: 10%;">St.</th>
+                                        <th style="width: 20%;">Img</th>
+
+                                    </tr>
+
+                                   
+
+
+                                </table>
+
+                            </div>
+
+
+                            <!-- </div> -->
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+
+                <!-- form model add item menu -->
+                <div id="Products2container">
+
+
+
+                    <div>
+                        <div class="title">Products2</div>
+                        <div>
+                            <form id="myForm" action="www.google.com">
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <label for="itemname" class="m-2">Name </label>
+                                        <input id="itemname" name="itemname" class="m-2 float-end" style="width: 70%;"
+                                            type="text">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <label for="itemprice" class="m-2">Price </label>
+                                        <input id="itemprice" name="itemprice" class="m-2 float-end" style="width: 70%;"
+                                            type="number">
+                                    </div>
+                                </div>
+                                <div class=" d-flex justify-content-between">
+
+                                    <label for="itemcat" class="m-2">Category </label>
+                                    <div class=" d-flex-colmun float-end m-2" style="width: 70%;">
+                                        <input id="itemcat" name="itemcat" class=" text-dark btn btn-light  w-100 "
+                                            value="click to select the category" type="button">
+
+
+                                        <ul id='dropdown' class='dropdown  ' style="position: absolute;width: 65%;">
+                                            <li class="mt-3"><a>Hat</a></li>
+                                            <li><a>sock</a></li>
+                                            <li><a>Tshirt</a></li>
+                                            <li><a>Pant</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <label for="itemstock" class="m-2">Stock</label>
+                                        <input id="itemstock" name="itemstock" class="m-2 float-end" style="width: 70%;"
+                                            type="number">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="d-flex justify-content-between">
+                                        <label class="m-2">Images</label>
+                                        <label for="itemfile" class="btn m-2 float-end bg-light text-dark"
+                                            style="width: 70%;">Click to choose images</label>
+                                        <input id="itemfile" name="itemfile" class="m-2 float-end d-none"
+                                            style="width: 70%;" type="file" multiple>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <input id='additembtn' type="submit" value="Add New Item" class="  m-2 py-2 "
+                                        style="width: 100%;">
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div id="minimize">
+            <span> </span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
