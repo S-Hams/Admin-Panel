@@ -4,23 +4,23 @@ var accounts = []
 fetch('http://localhost:8001/acc')
     .then(x => x.text())
     .then(y => {
-        
+
         accounts = JSON.parse(y)
         var acckeys = Object.keys(accounts[0])
         var accvals = Object.values(accounts[0])
         console.log(accounts)
         console.log(acckeys, accvals)
-       
+
     }
     )
-.catch( // age vasl nashod be server dasti user pass ha ro midim behesh
-    accounts[0] = {
-        admin1: "password1",
-        admin2: "password2",
-        admin3: "password3"
-    }
+    .catch( // age vasl nashod be server dasti user pass ha ro midim behesh
+        accounts[0] = {
+            admin1: "password1",
+            admin2: "password2",
+            admin3: "password3"
+        }
 
-);
+    );
 
 
 
@@ -82,6 +82,6 @@ function deny() {
 
 function authorized() {
     alert('x')
-    location.assign('./html/admin.html') // inja migim age user,pass ok bud boro be page e admin
+    location.assign('html/admin.html') // inja migim age user,pass ok bud boro be page e admin
 }
 
