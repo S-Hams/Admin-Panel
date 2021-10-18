@@ -82,6 +82,6 @@ function deny() {
 
 function authorized() {
     alert('x')
-    location.assign('./admin.html') // inja migim age user,pass ok bud boro be page e admin
+    location.assign('../html/admin.html') // inja migim age user,pass ok bud boro be page e admin
 }
 
