@@ -89,8 +89,23 @@ color : #fff ;
  padding: .3rem .8rem ;
 }
 
+@media only screen and (max-width: 900px) {
+    #login-container {
+        width: 40%;
+    }
+  }
 
+@media only screen and (max-width: 700px) {
+    #login-container {
+        width: 50%;
+    }
+  }
 
+  @media only screen and (max-width: 400px) {
+    #login-container {
+        width: 75%;
+    }
+  }
 
 
 
